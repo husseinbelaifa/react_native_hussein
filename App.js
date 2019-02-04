@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View,TextInput,Button } from 'react-native';
-import ListItem from './src/components/PlaceItem/PlaceItem'
+import PlaceItem from "./src/components/PlaceItem/PlaceItem";
 export default class App extends React.Component {
   state={
     placeName:'',

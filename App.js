@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View,TextInput,Button } from 'react-native';
 import PlaceItem from "./src/components/PlaceItem/PlaceItem";
+import placeimage from "./assets/beautiful-place.jpg";
 export default class App extends React.Component {
   state={
     placeName:'',
@@ -19,7 +20,11 @@ export default class App extends React.Component {
     if(this.state.placeName.trim()==='') return 
     this.setState(prevState=>{
       return {
-        places:prevState.places.concat({key : Math.random(),value :prevState.placeName})
+        places:prevState.places.concat({
+          key : Math.random(),
+          name :prevState.placeName,
+          image:placeimage
+        })
       }
     })
 
